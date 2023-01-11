@@ -1,0 +1,7 @@
+.categories_page {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50px;
+    gap: 10px
+}

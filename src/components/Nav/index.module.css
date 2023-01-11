@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav_menu {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   background-color: rgb(176, 122, 227);
+   padding: 20px 0;
+}
+
+.nav_menu a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(23, 3, 35);
+    cursor: pointer;
+}

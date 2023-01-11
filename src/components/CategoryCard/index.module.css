@@ -1,0 +1,8 @@
+.category_card {
+    border: 2px solid green;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(200, 238, 200);
+}
