@@ -1,12 +1,32 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React , { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ProductCard from '../../components/ProductCard';
+import { getProducts } from '../../requests/products';
+import s from './index.module.css';
 
 export default function ProductsPage() {
-console.log(useParams())
 
 const {category} = useParams()
-console.log(category)
+
+const [ products, setProducts ] = useState([]);
+
+useEffect(() => {getProducts(category,setProducts)} , [])
+
+console.log(products)
+
   return (
-    <div>{category}</div>
+    <div>
+      {
+        products.length === 0 ?
+          <p>category {category} are loading</p>
+        : 
+          <div className={s.products_container}>
+            {
+              products.map(el => <ProductCard key={el.id} {...el}/>)
+            }
+          </div>
+      }
+    </div>
+   
   )
 }

@@ -6,3 +6,8 @@
     align-items: center;
     background-color: rgb(200, 238, 200);
 }
+
+.category_card a{
+    text-decoration: none;
+    color: black;
+}
